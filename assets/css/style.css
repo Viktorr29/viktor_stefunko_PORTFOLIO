@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+:root {
+    --primarna-nadpis: #f71735 ;
+    --primarna-podnadpis: #FF9F1C ;
+    --farba-pozadia: #FDFFFC ;
+    --bullet-point:#143642 ;
+    --farba-text: #011728 ;
+
+    --bg-najslabsi: #E4E6E9 ;
+    --bg-slaby: #ADB5BC ;
+    --bg-stredny: #929CA6 ;
+    --bg-silny: #778390 ;
+    --bg-najsilnejsi: #606A75 ;
+    --farba-biela: #FFFFFF ;
+    --farba-cierna: #000000 ;
+
+
+    --primarny-gradient: linear-gradient(
+    135deg,
+        #143642 0%,
+        #011728 100% ) ;
+    --sekundarny-gradient: linear-gradient(
+        135deg,
+        #FF9F1C 0%,
+        #A16B21 100% ) ;
+
+
+    --font-primarny: 'Bebas Neue', sans-serif;
+    --font-sekundarny: 'Montserrat', sans-serif;
+    --font-text: 'Open Sans', sans-serif;
+
+    --medzera-s: 1rem ;
+    --medzera-m: 1.5rem ;
+    --medzera-l: 2rem ;
+    --medzera-xl: 3rem ;
+}
+
+
+/* Mobilná verzia */
+
+body{
+    background: var(--farba-pozadia) ;
+    color: var(--farba-text) ; }
+
+.zaciatok {
+    width:100%;
+    max-width:430px;
+    margin:auto;
+    padding:20px 16px 40px;
+}
+
+.header{
+    max-width:430px;
+    margin:auto;
+    padding:16px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:2px solid var(--border-color);
+}
+
+.menu-btn{
+    width:48px;
+    height:48px;
+    border:none;
+    border-radius:14px;
+    background: var(--bg-najsilnejsi)
+    color:white;
+    font-size:24px;
+    cursor:pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Desktop verzia */
+@media (min-width:1024px)
+
+
+
+
+
