@@ -72,7 +72,13 @@ body{
     cursor:pointer;
 }
 
+h2 {
+    font-family: var(--font-primarny);
+}
 
+h3 {
+    font-family: var(--primarny-gradient);
+}
 
 
 
