@@ -1,45 +1,50 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
+/* =========================
+    ROOT
+========================= */
 
 :root {
-    --primarna-nadpis: #f71735 ;
-    --primarna-podnadpis: #FF9F1C ;
-    --farba-pozadia: #FDFFFC ;
-    --bullet-point:#143642 ;
-    --farba-text: #011728 ;
 
-    --bg-najslabsi: #E4E6E9 ;
-    --bg-slaby: #ADB5BC ;
-    --bg-stredny: #929CA6 ;
-    --bg-silny: #778390 ;
-    --bg-najsilnejsi: #606A75 ;
-    --farba-biela: #FFFFFF ;
-    --farba-cierna: #000000 ;
+    --primarna-nadpis: #f71735;
+    --primarna-podnadpis: #FF9F1C;
 
+    --farba-pozadia: #FDFFFC;
+    --bullet-point:#143642;
+    --farba-text:#011728;
+
+    --bg-najslabsi:#E4E6E9;
+    --bg-slaby:#ADB5BC;
+    --bg-stredny:#929CA6;
+    --bg-silny:#778390;
+    --bg-najsilnejsi:#606A75;
+
+    --farba-biela:#FFFFFF;
+    --farba-cierna:#000000;
 
     --primarny-gradient: linear-gradient(
     135deg,
-        #143642 0%,
-        #011728 100% ) ;
+    #143642 0%,
+    #011728 100%);
+
     --sekundarny-gradient: linear-gradient(
-        135deg,
-        #FF9F1C 0%,
-        #A16B21 100% ) ;
+    135deg,
+    #FF9F1C 0%,
+    #A16B21 100%);
 
+    --font-primarny:'Bebas Neue', sans-serif;
+    --font-sekundarny:'Montserrat', sans-serif;
+    --font-text:'Open Sans', sans-serif;
 
-    --font-primarny: 'Bebas Neue', sans-serif;
-    --font-sekundarny: 'Montserrat', sans-serif;
-    --font-text: 'Open Sans', sans-serif;
-
-    --medzera-s: 1rem ;
-    --medzera-m: 1.5rem ;
-    --medzera-l: 2rem ;
-    --medzera-xl: 3rem ;
+    --medzera-s:1rem;
+    --medzera-m:1.5rem;
+    --medzera-l:2rem;
+    --medzera-xl:3rem;
 }
 
-
-/* Mobilná verzia */
-
+/* =========================
+    RESET
+========================= */
 
 *{
     margin:0;
@@ -75,12 +80,11 @@ body{
 
 .logo{
     width:55px;
-    height:auto;
 }
 
 .menu_tlacidlo{
-    width:50px;
-    height:50px;
+    width:52px;
+    height:52px;
 
     border:none;
     border-radius:14px;
@@ -120,10 +124,10 @@ body{
 
     padding:var(--medzera-l);
 
-    border-radius:0px 0px 28px 28px;
+    border-radius:0 0 28px 28px;
 
     box-shadow:
-    5px 6px 0px rgba(0,0,0,0.18);
+    5px 6px 0 rgba(0,0,0,0.18);
 
     margin-bottom:var(--medzera-xl);
 }
@@ -136,10 +140,6 @@ body{
     gap:var(--medzera-m);
 }
 
-/* =========================
-    HERO NADPIS
-========================= */
-
 .hero_nadpis{
     font-family:var(--font-primarny);
 
@@ -151,10 +151,6 @@ body{
     letter-spacing:-2px;
 }
 
-/* =========================
-    HERO OBRÁZOK
-========================= */
-
 .hero_obrazok{
     width:120px;
     height:120px;
@@ -162,20 +158,12 @@ body{
     object-fit:cover;
 }
 
-/* =========================
-    HERO BUTTON
-========================= */
-
 .hero_tlacidla{
     display:flex;
     justify-content:flex-end;
 
     margin-top:1rem;
 }
-
-/* =========================
-    TEXT HERO
-========================= */
 
 .hero_text{
     margin-top:2rem;
@@ -192,7 +180,7 @@ body{
 }
 
 .hero_text p{
-    font-size:1.2rem;
+    font-size:1.15rem;
     line-height:1.5;
 
     font-family:var(--font-sekundarny);
@@ -237,7 +225,7 @@ body{
 }
 
 /* =========================
-    SEKČNÝ NADPIS
+    NADPIS SEKCIE
 ========================= */
 
 .nadpis_sekcie{
@@ -260,7 +248,7 @@ body{
 
     padding:1.2rem;
 
-    border-radius:0px 0px 28px 28px;
+    border-radius:0 0 28px 28px;
 
     display:flex;
     gap:1rem;
@@ -268,12 +256,8 @@ body{
     margin-bottom:1.8rem;
 
     box-shadow:
-    5px 6px 0px rgba(0,0,0,0.18);
+    5px 6px 0 rgba(0,0,0,0.18);
 }
-
-/* =========================
-    OBRÁZOK PROJEKTU
-========================= */
 
 .projekt_obrazok{
     width:105px;
@@ -284,16 +268,16 @@ body{
     flex-shrink:0;
 }
 
-/* =========================
-    TEXT PROJEKT
-========================= */
+.projekt_text{
+    flex:1;
+}
 
 .projekt_text h3{
     color:var(--primarna-podnadpis);
 
     font-family:var(--font-primarny);
 
-    font-size:1.2rem;
+    font-size:1.3rem;
 
     margin-bottom:0.7rem;
 }
@@ -318,7 +302,7 @@ body{
 }
 
 /* =========================
-    PROGRAMY
+    IKONY PROGRAMOV
 ========================= */
 
 .programy{
@@ -326,23 +310,23 @@ body{
     gap:0.6rem;
 
     margin-top:1rem;
+
 }
 
-.programy span{
+.programy img{
     width:38px;
     height:38px;
+
+    object-fit:cover;
 
     border-radius:8px;
 
     background:var(--primarny-gradient);
 
-    color:var(--farba-biela);
+    padding:4px;
 
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    font-weight:700;
+    box-shadow:
+    0 3px 6px rgba(0,0,0,0.15);
 }
 
 /* =========================
@@ -396,10 +380,62 @@ body{
     }
 }
 
-/* Desktop verzia */
-@media (min-width:1024px)
+/* =========================
+    DESKTOP
+========================= */
 
+@media(min-width:1024px){
 
+    .hlavicka{
+        max-width:1300px;
+        padding:1.5rem 2rem;
+    }
 
+    .obsah{
+        max-width:1300px;
+        padding:3rem 2rem;
+    }
 
+    .hero_karta{
+        padding:3rem;
+    }
 
+    .hero_nadpis{
+        font-size:7rem;
+    }
+
+    .hero_obrazok{
+        width:220px;
+        height:220px;
+    }
+
+    .hero_text{
+        margin-top:3rem;
+        max-width:700px;
+    }
+
+    .hero_text p{
+        font-size:1.4rem;
+    }
+
+    .nadpis_sekcie{
+        font-size:5rem;
+    }
+
+    .karta_projekt{
+        padding:2rem;
+    }
+
+    .projekt_obrazok{
+        width:220px;
+        height:300px;
+    }
+
+    .projekt_text h3{
+        font-size:2rem;
+    }
+
+    .projekt_text p{
+        font-size:1rem;
+    }
+}
