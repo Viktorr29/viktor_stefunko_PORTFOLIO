@@ -7,8 +7,8 @@
 
     <title>Viktor Štefunko</title>
 
-    <link rel="stylesheet" href="assets/css/normalize.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -19,9 +19,16 @@
 
 <header class="hlavicka">
 
-    <img src="assets/img/moje logo.png"
+    <img src="assets/icons/logo.png"
     alt="Logo"
     class="logo">
+
+    <nav class="hlavicka_nav">
+        <a href="#">Domov</a>
+        <a href="#">O mne</a>
+        <a href="#">Portfólio</a>
+        <a href="#">Kontakt</a>
+    </nav>
 
     <button class="menu_tlacidlo">
         ☰
@@ -43,22 +50,22 @@
 
         <div class="hero_hore">
 
-            <h1 class="hero_nadpis">
-                VIKTOR <br>
-                ŠTEFUNKO
-            </h1>
+            <div class="hero_left">
+                <h1 class="hero_nadpis">
+                    VIKTOR <br>
+                    ŠTEFUNKO
+                </h1>
+            </div>
 
-            <img src="assets/img/Moja FOTO.png"
-            alt="Moja fotka"
-            class="hero_obrazok">
+            <div class="hero_right">
+                <img src="img/Moja FOTO.png"
+                alt="Moja fotka"
+                class="hero_obrazok">
 
-        </div>
-
-        <div class="hero_tlacidla">
-
-            <a href="#" class="tlacidlo male">
-                Spolupráca
-            </a>
+                <a href="#" class="tlacidlo hero_kontaktovat">
+                    Kontaktovať
+                </a>
+            </div>
 
         </div>
 
@@ -93,13 +100,15 @@
             NAJLEPŠIE PROJEKTY
         </h2>
 
+        <div class="projekty_grid">
+
         <!-- =========================
             PROJEKT 1
         ========================== -->
 
         <article class="karta_projekt">
 
-            <img src="assets/img/Caffe AROMA.png"
+            <img src="img/Caffe AROMA.png"
             alt="Caffé Arena"
             class="projekt_obrazok">
 
@@ -119,9 +128,9 @@
 
                 <div class="programy">
 
-                    <img src="assets/img/Ai.png" alt="Illustrator">
+                    <img src="assets/icons/Ai.png" alt="Illustrator">
 
-                    <img src="assets/img/Ps.png=" alt="Photoshop">
+                    <img src="assets/icons/Ps.png" alt="Photoshop">
 
                 </div>
 
@@ -135,7 +144,7 @@
 
         <article class="karta_projekt">
 
-            <img src="assets/img/FESTIVAL ZRCE.png"
+            <img src="img/FESTIVAL ZRCE.png"
             alt="ZRČE Festival"
             class="projekt_obrazok">
 
@@ -155,9 +164,9 @@
 
                 <div class="programy">
 
-                    <img src="assets/img/ikony/illustrator.png" alt="Illustrator">
+                    <img src="assets/icons/Ai.png" alt="Illustrator">
 
-                    <img src="assets/img/ikony/photoshop.png" alt="Photoshop">
+                    <img src="assets/icons/Ps.png" alt="Photoshop">
 
                 </div>
 
@@ -171,7 +180,7 @@
 
         <article class="karta_projekt">
 
-            <img src="assets/img/AUTOSHOW.jpg"
+            <img src="img/AUTOSHOW.jpg"
             alt="Beach Autoshow"
             class="projekt_obrazok">
 
@@ -191,15 +200,17 @@
 
                 <div class="programy">
 
-                    <img src="assets/img/Lr.png" alt="Lightroom">
+                    <img src="assets/icons/Lr.png" alt="Lightroom">
 
-                    <img src="assets/img/Ps.png" alt="Photoshop">
+                    <img src="assets/icons/Ps.png" alt="Photoshop">
 
                 </div>
 
             </div>
 
         </article>
+
+        </div>
 
         <!-- =========================
             TLAČIDLO
@@ -223,7 +234,7 @@
 
 <footer class="paticka">
 
-    © 2024 Viktor Štefunko.
+    © 2024 Viktor Štefunko. 
     Všetky práva vyhradené.
 
 </footer>

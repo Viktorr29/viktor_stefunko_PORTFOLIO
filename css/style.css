@@ -73,13 +73,29 @@ body{
     justify-content:space-between;
     align-items:center;
 
-    padding:1rem;
+    padding:0.75rem 0.9rem;
 
     border-bottom:2px solid var(--bg-stredny);
+    background:var(--bg-slaby);
 }
 
 .logo{
-    width:55px;
+    width:100px;
+    padding:0;
+    background:none;
+}
+
+.hlavicka_nav{
+    display:none;
+    gap:1.5rem;
+}
+
+.hlavicka_nav a{
+    color:var(--farba-cierna);
+    text-decoration:none;
+    font-family:var(--font-sekundarny);
+    font-weight:700;
+    font-size:0.95rem;
 }
 
 .menu_tlacidlo{
@@ -115,6 +131,12 @@ body{
     padding:var(--medzera-m);
 }
 
+/* prevent layout shifting on very small viewports */
+.obsah,
+.hlavicka{
+    min-width:360px;
+}
+
 /* =========================
     HERO KARTA
 ========================= */
@@ -132,6 +154,10 @@ body{
     margin-bottom:var(--medzera-xl);
 }
 
+.hero_karta{
+    overflow:hidden;
+}
+
 .hero_hore{
     display:flex;
     justify-content:space-between;
@@ -140,15 +166,26 @@ body{
     gap:var(--medzera-m);
 }
 
+.hero_left{
+    flex:1;
+}
+
+.hero_right{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-end;
+    gap:0.8rem;
+}
+
 .hero_nadpis{
     font-family:var(--font-primarny);
 
     font-size:4rem;
-    line-height:0.9;
+    line-height:1.02;
 
     color:var(--primarna-nadpis);
 
-    letter-spacing:-2px;
+    letter-spacing:2px;
 }
 
 .hero_obrazok{
@@ -156,6 +193,12 @@ body{
     height:120px;
 
     object-fit:cover;
+
+    margin-right:-0.3rem;
+}
+
+.hero_kontaktovat{
+    align-self:flex-end;
 }
 
 .hero_tlacidla{
@@ -181,7 +224,7 @@ body{
 
 .hero_text p{
     font-size:1.15rem;
-    line-height:1.5;
+    line-height:1.7;
 
     font-family:var(--font-sekundarny);
 
@@ -294,6 +337,8 @@ body{
     font-size:0.9rem;
 
     font-family:var(--font-sekundarny);
+
+    font-weight:700;
 }
 
 .projekt_text p{
@@ -321,12 +366,11 @@ body{
 
     border-radius:8px;
 
-    background:var(--primarny-gradient);
+    background:transparent;
 
-    padding:4px;
+    padding:0;
 
-    box-shadow:
-    0 3px 6px rgba(0,0,0,0.15);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
 }
 
 /* =========================
@@ -362,13 +406,55 @@ body{
 
 @media(max-width:430px){
 
-    .hero_nadpis{
-        font-size:3.3rem;
+    /* mobile: keep heading and image on one row like the reference */
+    .hero_karta{
+        overflow:visible;
     }
 
+    .hero_hore{
+        display:flex;
+        flex-direction:row;
+        align-items:flex-start;
+        justify-content:space-between;
+        gap:0.6rem;
+    }
+
+    .hero_left{
+        flex:0 0 60%;
+    }
+
+    .hero_left .hero_nadpis{
+        font-size:3rem;
+        line-height:1.02;
+    }
+
+    .hero_right{
+        flex:0 0 40%;
+        display:flex;
+        flex-direction:column;
+        align-items:flex-end;
+        gap:0.3rem;
+    }
+
+    /* slightly smaller image, full visible */
     .hero_obrazok{
-        width:100px;
-        height:100px;
+        width:96px;
+        height:96px;
+        object-fit:cover;
+        object-position:center;
+        border-radius:6px;
+        margin-right:0;
+    }
+
+    .hero_kontaktovat{
+        margin-top:0.2rem;
+        align-self:flex-end;
+        padding:8px 12px;
+        font-size:0.9rem;
+    }
+
+    .hero_text{
+        margin-top:1rem;
     }
 
     .nadpis_sekcie{
@@ -378,56 +464,173 @@ body{
     .hero_text p{
         font-size:1rem;
     }
+
+    .projekty_grid{
+        grid-template-columns:1fr;
+        gap:1rem;
+    }
+
+    .karta_projekt{
+        padding:1rem;
+        flex-direction:row;
+    }
 }
 
 /* =========================
     DESKTOP
 ========================= */
 
+@media(min-width:431px) and (max-width:1023px){
+
+    /* medium devices: mirror mobile layout but slightly larger */
+    .hero_hore{
+        display:flex;
+        flex-direction:row;
+        align-items:flex-start;
+        justify-content:space-between;
+        gap:0.8rem;
+    }
+
+    .hero_left{
+        flex:0 0 60%;
+    }
+
+    .hero_left .hero_nadpis{
+        font-size:3.8rem;
+        line-height:1.04;
+    }
+
+    .hero_right{
+        flex:0 0 40%;
+        display:flex;
+        flex-direction:column;
+        align-items:flex-end;
+        gap:0.4rem;
+    }
+
+    .hero_obrazok{
+        width:120px;
+        height:120px;
+        object-fit:cover;
+        border-radius:6px;
+        margin-right:0;
+    }
+
+    .hero_kontaktovat{
+        padding:9px 14px;
+        font-size:0.95rem;
+        align-self:flex-end;
+    }
+
+    .hero_text{
+        margin-top:1.1rem;
+    }
+
+    .projekty_grid{
+        grid-template-columns:repeat(2, 1fr);
+        gap:1rem;
+    }
+
+}
+
 @media(min-width:1024px){
 
     .hlavicka{
         max-width:1300px;
-        padding:1.5rem 2rem;
+        padding:1.5rem 3rem;
+    }
+
+    .hlavicka_nav{
+        display:flex;
+    }
+
+    .menu_tlacidlo{
+        display:none;
     }
 
     .obsah{
         max-width:1300px;
-        padding:3rem 2rem;
+        padding:3rem 4rem;
     }
 
     .hero_karta{
-        padding:3rem;
+        padding:3.5rem;
+    }
+
+    .hero_hore{
+        gap:4rem;
+        align-items:center;
+    }
+
+    .hero_left{
+        max-width:700px;
+    }
+
+    .hero_right{
+        gap:1.2rem;
     }
 
     .hero_nadpis{
         font-size:7rem;
+        line-height:1.06;
+        letter-spacing:3px;
     }
 
     .hero_obrazok{
-        width:220px;
-        height:220px;
+        width:320px;
+        height:320px;
+
+        margin-right:-0.8rem;
+    }
+
+    .hero_kontaktovat{
+        padding:1rem 1.6rem;
+        font-size:0.95rem;
     }
 
     .hero_text{
         margin-top:3rem;
-        max-width:700px;
+        max-width:680px;
+    }
+
+    .hero_text h2{
+        font-size:2.4rem;
+        margin-bottom:1.5rem;
+        line-height:1.1;
     }
 
     .hero_text p{
-        font-size:1.4rem;
+        font-size:1.15rem;
+        line-height:1.8;
+        max-width:600px;
+    }
+
+    .hero_kontaktovat{
+        padding:1rem 1.6rem;
+        font-size:0.95rem;
     }
 
     .nadpis_sekcie{
         font-size:5rem;
     }
 
+    .projekty_grid{
+        display:grid;
+        grid-template-columns:repeat(3, minmax(280px, 1fr));
+        gap:2rem;
+    }
+
     .karta_projekt{
         padding:2rem;
+        flex-direction:column;
+    }
+
+    .projekty_tlacidlo{
+        justify-content:flex-start;
     }
 
     .projekt_obrazok{
-        width:220px;
+        width:100%;
         height:300px;
     }
 
