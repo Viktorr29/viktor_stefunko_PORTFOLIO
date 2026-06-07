@@ -57,6 +57,7 @@ body{
     color:var(--farba-text);
 
     font-family:var(--font-text);
+    padding:1.2rem 0 1.5rem;
 }
 
 /* =========================
@@ -65,9 +66,9 @@ body{
 
 .hlavicka{
     width:100%;
-    max-width:430px;
+    max-width:none;
 
-    margin:auto;
+    margin:0;
 
     display:flex;
     justify-content:space-between;
@@ -130,6 +131,10 @@ body{
     margin:auto;
 
     padding:var(--medzera-m);
+    min-height:calc(100vh - 200px);
+    background:transparent;
+    border-radius:0;
+    box-shadow:none;
 }
 
 /* prevent layout shifting on very small viewports */
@@ -466,6 +471,15 @@ body{
         font-size:1rem;
     }
 
+    .obsah{
+        width:100vw;
+        max-width:none;
+        margin:0;
+        border-radius:0;
+        padding:1rem 0.9rem 1.2rem;
+        overflow-x:hidden;
+    }
+
     .projekty_grid{
         grid-template-columns:1fr;
         gap:1rem;
@@ -644,6 +658,14 @@ body{
     .projekt_text p{
         font-size:1rem;
     }
+
+    .o_mne_foto{
+        width:320px;
+        height:320px;
+        max-width:none;
+        min-width:0;
+        border-radius:36px;
+    }
 }
 
 /* =========================
@@ -655,6 +677,7 @@ body{
     color:var(--primarna-nadpis);
     font-size:4rem;
     margin-bottom:1rem;
+    letter-spacing:1px;
 }
 
 .o_mne{
@@ -674,34 +697,59 @@ body{
 .o_mne_text p{
     font-family:var(--font-sekundarny);
     font-size:1rem;
-    line-height:1.2;
-    margin-bottom:2rem;
+    line-height:1.7;
+    margin-bottom:1.4rem;
+    color:var(--farba-text);
+    font-weight:700;
 }
 
 .o_mne_foto{
-    width:140px;
-    height:280px;
+    width:40%;
+    max-width:180px;
+    min-width:140px;
+    height:auto;
     object-fit:cover;
+    border-radius:24px;
+    box-shadow:0 18px 32px rgba(0,0,0,0.14);
 }
 
 /* =========================
     PONUKA
 ========================= */
 
+.ponuka{
+    background:transparent;
+    padding:0;
+}
+
+.ponuka_bg{
+    background:#F2F2F1;
+    width:100vw;
+    position:relative;
+    left:50%;
+    right:50%;
+    margin-left:-50vw;
+    margin-right:-50vw;
+    padding:1.8rem 1rem;
+}
+
 .ponuka_karta{
-    background:#ECECEC;
-    border-radius:24px;
-    padding:1rem;
+    background:transparent;
+    border-radius:30px;
+    padding:1.2rem;
+    width:100%;
+    max-width:520px;
+    margin:0 auto;
 }
 
 .ponuka_grid{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:0.8rem;
+    gap:0.85rem;
 }
 
 .sluzba{
-    min-height:140px;
+    min-height:150px;
 
     display:flex;
     align-items:center;
@@ -711,14 +759,15 @@ body{
 
     padding:1rem;
 
-    font-family:var(--font-primarny);
-    font-size:1.8rem;
-    line-height:1.1;
+    font-family:'Bebas Neue', sans-serif;
+    font-size:1.3rem;
+    line-height:1.2;
+    letter-spacing:0.02em;
+    text-transform:uppercase;
 
     position:relative;
 
-    box-shadow:
-    8px 8px 0 rgba(96,106,117,0.7);
+    box-shadow: 8px 8px 0 rgba(96,106,117,0.25);
 }
 
 .zlta{
@@ -732,45 +781,106 @@ body{
 }
 
 .lavy_horny{
-    border-radius:60px 0 0 0;
+    border-radius:30px 0 0 0;
 }
 
 .pravy_horny{
-    border-radius:0 60px 0 0;
+    border-radius:0 30px 0 0;
 }
 
 .lavy_dolny{
-    border-radius:0 0 0 60px;
+    border-radius:0 0 0 30px;
 }
 
 .pravy_dolny{
-    border-radius:0 0 60px 0;
+    border-radius:0 0 30px 0;
 }
 
 .software{
     margin-top:2rem;
 
     display:flex;
-    justify-content:center;
-    gap:0.3rem;
+        justify-content:space-between;
+        align-items:center;
+        gap:1rem;
 
-    background:#fff;
+        background:#fff;
 
-    width:max-content;
+        width:100%;
+        max-width:920px;
 
-    padding:0.4rem;
+        padding:1rem 1.4rem;
 
-    border-radius:999px;
+        border-radius:999px;
 
-    margin-left:auto;
-    margin-right:auto;
+        margin-left:auto;
+        margin-right:auto;
 
-    box-shadow:
-    5px 5px 0 rgba(96,106,117,0.7);
+        box-shadow: 5px 5px 0 rgba(96,106,117,0.2);
+    }
+
+    .software img{
+        width:52px;
+        height:52px;
+    .o_mne_obsah{
+        flex-direction:column;
+        gap:1.5rem;
+    }
+
+    .o_mne_foto{
+        width:100%;
+        max-width:none;
+        min-width:0;
+        height:auto;
+    }
+
+    .o_mne_text p{
+        font-size:1rem;
+    }
+
+    .ponuka_karta{
+        padding:1rem;
+    }
 }
 
-.software img{
-    width:34px;
-    height:34px;
-    object-fit:contain;
+@media(min-width:1024px){
+    .o_mne_foto{
+        width:320px;
+        height:320px;
+        max-width:none;
+        min-width:0;
+        border-radius:36px;
+    }
+
+    .o_mne_obsah{
+        gap:3rem;
+        align-items:center;
+    }
+
+    .ponuka_bg{
+        padding:3rem 4rem;
+    }
+
+    .ponuka_karta{
+        max-width:1320px;
+        padding:2rem 2.5rem;
+    }
+
+    .ponuka_grid{
+        grid-template-columns:repeat(2, minmax(380px, 1fr));
+        gap:2rem;
+    }
+
+    .sluzba{
+        min-height:280px;
+        padding:1.5rem;
+        font-size:1.45rem;
+    }
+
+    .software{
+        width:100%;
+        max-width:980px;
+        gap:1rem;
+        padding:1rem 1.5rem;
+    }
 }
