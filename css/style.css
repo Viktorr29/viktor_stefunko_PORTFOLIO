@@ -760,14 +760,14 @@ body{
     padding:1rem;
 
     font-family:'Bebas Neue', sans-serif;
-    font-size:1.3rem;
-    line-height:1.2;
+    font-size:1.65rem;
+    line-height:1.3;
     letter-spacing:0.02em;
     text-transform:uppercase;
 
     position:relative;
 
-    box-shadow: 8px 8px 0 rgba(96,106,117,0.25);
+    box-shadow: 9px 9px 0 rgba(96,106,117,0.28);
 }
 
 .zlta{
@@ -800,28 +800,31 @@ body{
     margin-top:2rem;
 
     display:flex;
-        justify-content:space-between;
-        align-items:center;
-        gap:1rem;
+    justify-content:center;
+    align-items:center;
+    gap:1.4rem;
 
-        background:#fff;
+    background:#fff;
 
-        width:100%;
-        max-width:920px;
+    width:max-content;
 
-        padding:1rem 1.4rem;
+    padding:0.9rem 1.6rem;
 
-        border-radius:999px;
+    border-radius:999px;
 
-        margin-left:auto;
-        margin-right:auto;
+    margin-left:auto;
+    margin-right:auto;
 
-        box-shadow: 5px 5px 0 rgba(96,106,117,0.2);
-    }
+    box-shadow: 9px 9px 0 rgba(96,106,117,0.28);
+}
 
-    .software img{
-        width:52px;
-        height:52px;
+.software img{
+    width:60px;
+    height:60px;
+    object-fit:contain;
+}
+
+@media(max-width:430px){
     .o_mne_obsah{
         flex-direction:column;
         gap:1.5rem;
@@ -867,20 +870,27 @@ body{
     }
 
     .ponuka_grid{
-        grid-template-columns:repeat(2, minmax(380px, 1fr));
-        gap:2rem;
+        grid-template-columns:repeat(2, minmax(400px, 1fr));
+        gap:2.5rem;
     }
 
     .sluzba{
-        min-height:280px;
-        padding:1.5rem;
-        font-size:1.45rem;
+        min-height:320px;
+        padding:2rem;
+        font-size:3rem;
+        line-height:1.35;
+        box-shadow: 12px 12px 0 rgba(96,106,117,0.3);
     }
 
     .software{
-        width:100%;
-        max-width:980px;
-        gap:1rem;
-        padding:1rem 1.5rem;
+        width:max-content;
+        gap:1.6rem;
+        padding:1rem 1.8rem;
+        box-shadow: 12px 12px 0 rgba(96,106,117,0.3);
+    }
+
+    .software img{
+        width:66px;
+        height:66px;
     }
 }
