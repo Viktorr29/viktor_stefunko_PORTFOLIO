@@ -57,8 +57,11 @@ body{
     color:var(--farba-text);
 
     font-family:var(--font-text);
-    padding:1.2rem 0 1.5rem;
+    padding:0;
 }
+
+
+
 
 /* =========================
     HLAVIČKA
@@ -703,6 +706,14 @@ body{
     font-weight:700;
 }
 
+@media(min-width:1024px){
+    .o_mne_text p{
+        font-size:1.3rem;
+        line-height:1.9;
+    }
+}
+
+
 .o_mne_foto{
     width:40%;
     max-width:180px;
@@ -893,4 +904,221 @@ body{
         width:66px;
         height:66px;
     }
+}
+
+/* =========================
+    PORTFÓLIO
+========================= */
+
+.portfolio{
+    margin-bottom:3rem;
+}
+
+.portfolio_popis{
+    max-width:700px;
+
+    font-family:var(--font-sekundarny);
+    font-size:1.05rem;
+    line-height:1.8;
+    font-weight:600;
+
+    color:var(--farba-text);
+
+    margin-bottom:2rem;
+}
+
+/* =========================
+    PROJEKTY
+========================= */
+
+.projekty{
+    margin-bottom:3rem;
+}
+
+.projekty_grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:1.8rem;
+}
+
+.projekt_karta{
+
+    background:var(--farba-biela);
+
+    border-radius:0 0 28px 28px;
+
+    overflow:hidden;
+
+    box-shadow:
+    8px 8px 0 rgba(0,0,0,0.18);
+
+    transition:.25s ease;
+}
+
+.projekt_karta:hover{
+
+    transform:translateY(-6px);
+
+}
+
+.projekt_obrazok{
+
+    width:100%;
+    height:240px;
+
+    object-fit:cover;
+
+    display:block;
+
+}
+
+.projekt_info{
+
+    padding:1.5rem;
+
+}
+
+.projekt_info h2{
+
+    font-family:var(--font-primarny);
+
+    color:var(--primarna-podnadpis);
+
+    font-size:2rem;
+
+    margin-bottom:0.8rem;
+
+    letter-spacing:1px;
+
+}
+
+.projekt_info p{
+
+    font-family:var(--font-sekundarny);
+
+    font-size:1rem;
+
+    line-height:1.7;
+
+    margin-bottom:1.3rem;
+
+    color:var(--farba-text);
+
+}
+
+.projekt_info .tlacidlo{
+
+    display:inline-flex;
+
+}
+
+
+/* =========================
+    MOBIL
+========================= */
+
+@media(max-width:430px){
+
+    .portfolio_popis{
+
+        font-size:1rem;
+
+        line-height:1.7;
+
+    }
+
+    .projekty_grid{
+
+        grid-template-columns:1fr;
+
+        gap:1.2rem;
+
+    }
+
+    .projekt_obrazok{
+
+        height:210px;
+
+    }
+
+    .projekt_info{
+
+        padding:1.2rem;
+
+    }
+
+    .projekt_info h2{
+
+        font-size:1.7rem;
+
+    }
+
+}
+
+
+/* =========================
+    DESKTOP
+========================= */
+
+@media(min-width:1024px){
+
+    .portfolio{
+
+        margin-bottom:4rem;
+
+    }
+
+    .portfolio_popis{
+
+        max-width:850px;
+
+        font-size:1.25rem;
+
+        line-height:1.9;
+
+    }
+
+    .projekty_grid{
+
+        grid-template-columns:repeat(3,1fr);
+
+        gap:2rem;
+
+    }
+
+    .projekt_karta{
+
+        border-radius:0 0 36px 36px;
+
+        box-shadow:
+        12px 12px 0 rgba(0,0,0,0.18);
+
+    }
+
+    .projekt_obrazok{
+
+        height:320px;
+
+    }
+
+    .projekt_info{
+
+        padding:2rem;
+
+    }
+
+    .projekt_info h2{
+
+        font-size:2.5rem;
+
+    }
+
+    .projekt_info p{
+
+        font-size:1.05rem;
+
+        line-height:1.8;
+
+    }
+
 }
