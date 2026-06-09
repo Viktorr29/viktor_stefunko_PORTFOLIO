@@ -343,28 +343,27 @@ body{
 .projekt_text li{
     color:var(--bullet-point);
 
-    font-size:0.9rem;
+    font-size:1rem;
 
     font-family:var(--font-sekundarny);
 
-    font-weight:700;
+    font-weight:800;
 }
 
 .projekt_text p{
-    font-size:0.9rem;
-    line-height:1.5;
-}
+    font-size:1rem;
+    line-height:1.6;
+    font-weight:700;
 
-/* =========================
-    IKONY PROGRAMOV
-========================= */
+    margin-top:1rem;
+
+}
 
 .programy{
     display:flex;
     gap:0.6rem;
-
-    margin-top:1rem;
-
+    align-items:center;
+    margin-top:1.4rem;
 }
 
 .programy img{
@@ -380,6 +379,43 @@ body{
     padding:0;
 
     box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+}
+
+.portfolio .karta_projekt{
+    padding:1.3rem;
+    flex-direction:row;
+    align-items:center;
+    justify-content:flex-start;
+}
+
+.portfolio .karta_projekt .projekt_obrazok{
+    width:130px;
+    height:130px;
+    border-radius:18px;
+}
+
+.portfolio .projekt_text{
+    display:flex;
+    flex-direction:column;
+    gap:0.7rem;
+}
+
+.portfolio .projekt_text h3{
+    font-size:1.2rem;
+    margin-bottom:0.2rem;
+}
+
+.portfolio .projekt_text ul{
+    padding-left:1rem;
+    margin-bottom:0;
+}
+
+.portfolio .projekt_text li{
+    margin-bottom:0.2rem;
+}
+
+.portfolio .programy{
+    margin-top:0.6rem;
 }
 
 /* =========================
@@ -413,9 +449,9 @@ body{
     RESPONSIVE
 ========================= */
 
-@media(max-width:430px){
+@media(max-width:1023px){
 
-    /* mobile: keep heading and image on one row like the reference */
+    /* mobile/tablet: keep heading and image stacked for one version */
     .hero_karta{
         overflow:visible;
     }
@@ -497,59 +533,6 @@ body{
 /* =========================
     DESKTOP
 ========================= */
-
-@media(min-width:431px) and (max-width:1023px){
-
-    /* medium devices: mirror mobile layout but slightly larger */
-    .hero_hore{
-        display:flex;
-        flex-direction:row;
-        align-items:flex-start;
-        justify-content:space-between;
-        gap:0.8rem;
-    }
-
-    .hero_left{
-        flex:0 0 60%;
-    }
-
-    .hero_left .hero_nadpis{
-        font-size:3.8rem;
-        line-height:1.04;
-    }
-
-    .hero_right{
-        flex:0 0 40%;
-        display:flex;
-        flex-direction:column;
-        align-items:flex-end;
-        gap:0.4rem;
-    }
-
-    .hero_obrazok{
-        width:120px;
-        height:120px;
-        object-fit:cover;
-        border-radius:6px;
-        margin-right:0;
-    }
-
-    .hero_kontaktovat{
-        padding:9px 14px;
-        font-size:0.95rem;
-        align-self:flex-end;
-    }
-
-    .hero_text{
-        margin-top:1.1rem;
-    }
-
-    .projekty_grid{
-        grid-template-columns:repeat(2, 1fr);
-        gap:1rem;
-    }
-
-}
 
 @media(min-width:1024px){
 
@@ -835,7 +818,7 @@ body{
     object-fit:contain;
 }
 
-@media(max-width:430px){
+@media(max-width:1023px){
     .o_mne_obsah{
         flex-direction:column;
         gap:1.5rem;
@@ -912,19 +895,228 @@ body{
 
 .portfolio{
     margin-bottom:3rem;
+    text-align:left;
 }
 
-.portfolio_popis{
-    max-width:700px;
+/* =========================
+    KONTAKT
+========================= */
 
+.kontakt{
+    margin-bottom:4rem;
+}
+
+.kontakt_grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:3rem;
+    align-items:start;
+}
+
+.kontakt_levo{
+    max-width:560px;
+}
+
+.kontakt .nadpis_o_mne{
+    font-size:8rem;
+    letter-spacing:3px;
+    line-height:0.88;
+    margin-bottom:0.8rem;
+}
+
+.kontakt_text{
+    font-family:var(--font-sekundarny);
+    font-size:2rem;
+    line-height:1.4;
+    color:var(--farba-text);
+    margin:1rem 0 0;
+}
+
+.kontakt_cta{
+    font-family:var(--font-primarny);
+    color:var(--primarna-podnadpis);
+    font-size:2.2rem;
+    line-height:1.1;
+    margin:1.2rem 0 0;
+}
+
+.kontakt_forma{
+    background:var(--bg-najslabsi);
+    border-radius:32px;
+    padding:2rem;
+    margin-top:3rem;
+}
+
+.form_row{
+    display:grid;
+    gap:1rem;
+    margin-bottom:1rem;
+}
+
+.form_row_half{
+    grid-template-columns:1fr 1fr;
+}
+
+.form_row_bottom{
+    display:flex;
+    gap:1rem;
+    align-items:flex-end;
+    flex-wrap:wrap;
+}
+
+.form_icon_input{
+    display:flex;
+    align-items:center;
+    gap:0.9rem;
+    flex:1;
+    min-width:200px;
+    padding:1rem 1rem;
+    border:1px solid var(--farba-cierna);
+    border-radius:18px;
+    background:var(--farba-biela);
+}
+
+.form_icon_input img{
+    width:22px;
+    height:22px;
+}
+
+.kontakt_forma input,
+.kontakt_forma textarea{
+    width:100%;
+    border:1px solid var(--farba-cierna);
+    border-radius:18px;
+    padding:1rem 1.2rem;
+    font-family:var(--font-sekundarny);
+    font-size:1rem;
+    color:var(--farba-text);
+    background:var(--farba-biela);
+}
+
+.form_icon_input input{
+    width:100%;
+    border:none;
+    background:transparent;
+    padding:0;
+    font-family:var(--font-sekundarny);
+    font-size:1rem;
+    color:var(--farba-text);
+}
+
+.kontakt_forma textarea{
+    min-height:180px;
+    resize:none;
+}
+
+.kontakt_submit{
+    min-width:140px;
+    padding:1rem 1.4rem;
+}
+
+.kontakt_info{
+    margin-top:3rem;
+}
+
+.kontakt_name{
+    font-family:var(--font-primarny);
+    color:var(--primarna-nadpis);
+    font-size:5rem;
+    line-height:0.9;
+    margin-bottom:1.5rem;
+}
+
+.kontakt_details p{
     font-family:var(--font-sekundarny);
     font-size:1.05rem;
     line-height:1.8;
-    font-weight:600;
+    margin:0.4rem 0;
+}
 
+.kontakt_odkazy{
+    display:flex;
+    align-items:center;
+    gap:1rem;
+    margin-top:1.5rem;
+    flex-wrap:wrap;
+}
+
+.kontakt_odkazy span{
+    font-family:var(--font-primarny);
     color:var(--farba-text);
+    font-size:1rem;
+    letter-spacing:0.02em;
+    text-transform:uppercase;
+}
 
-    margin-bottom:2rem;
+.social_icons{
+    display:flex;
+    gap:1rem;
+}
+
+.social_icons img{
+    width:42px;
+    height:42px;
+    object-fit:contain;
+}
+
+@media(max-width:1023px){
+    .kontakt_grid{
+        grid-template-columns:1fr;
+    }
+
+    .kontakt_levo{
+        max-width:none;
+    }
+
+    .kontakt_forma{
+        padding:1.5rem;
+    }
+
+    .kontakt_text{
+        font-size:1.8rem;
+    }
+
+    .kontakt_cta{
+        font-size:1.8rem;
+    }
+
+    .kontakt_name{
+        font-size:4.2rem;
+    }
+
+    .form_row_half{
+        grid-template-columns:1fr;
+    }
+
+    .form_row_bottom{
+        flex-direction:column;
+        align-items:stretch;
+    }
+
+    .kontakt_odkazy{
+        justify-content:flex-start;
+    }
+}
+
+.portfolio .nadpis_o_mne{
+    font-family:var(--font-primarny);
+    color:var(--primarna-nadpis);
+        font-size:7rem;
+        line-height:0.95;
+        margin:0 0 1rem;
+        letter-spacing:2px;
+    }
+
+    .portfolio_popis{
+        max-width:780px;
+
+        font-family:var(--font-primarny);
+        font-size:2rem;
+        line-height:1.4;
+        font-weight:700;
+        color:var(--primarna-podnadpis);
+
+    margin:0 0 2.5rem;
 }
 
 /* =========================
@@ -939,9 +1131,11 @@ body{
     display:grid;
     grid-template-columns:1fr;
     gap:1.8rem;
+    justify-items:center;
 }
 
-.projekt_karta{
+.projekt_karta,
+.karta_projekt{
 
     background:var(--farba-biela);
 
@@ -953,9 +1147,15 @@ body{
     8px 8px 0 rgba(0,0,0,0.18);
 
     transition:.25s ease;
+
+    display:flex;
+    gap:1rem;
+    align-items:center;
+    padding:1.3rem;
 }
 
-.projekt_karta:hover{
+.projekt_karta:hover,
+.karta_projekt:hover{
 
     transform:translateY(-6px);
 
@@ -963,18 +1163,52 @@ body{
 
 .projekt_obrazok{
 
-    width:100%;
-    height:240px;
+    width:130px;
+    height:130px;
 
     object-fit:cover;
 
     display:block;
+    border-radius:18px;
 
 }
 
-.projekt_info{
+.projekt_info,
+.projekt_text{
 
-    padding:1.5rem;
+    flex:1;
+    display:flex;
+    flex-direction:column;
+        justify-content:center;
+    font-family:var(--font-primarny);
+
+    color:var(--primarna-podnadpis);
+
+    font-size:1.4rem;
+
+    margin-bottom:0.4rem;
+
+    letter-spacing:1px;
+}
+
+.projekt_info p,
+.projekt_text p{
+
+    font-family:var(--font-sekundarny);
+
+    font-size:0.95rem;
+
+    line-height:1.7;
+
+    margin-bottom:0;
+
+    color:var(--farba-text);
+
+}
+
+.projekt_info .tlacidlo{
+
+    display:inline-flex;
 
 }
 
@@ -1017,13 +1251,13 @@ body{
     MOBIL
 ========================= */
 
-@media(max-width:430px){
+@media(max-width:1023px){
 
     .portfolio_popis{
 
-        font-size:1rem;
+        font-size:1.8rem;
 
-        line-height:1.7;
+        line-height:1.5;
 
     }
 
@@ -1053,6 +1287,22 @@ body{
 
     }
 
+    .kontakt .nadpis_o_mne{
+
+        font-size:5rem;
+
+        line-height:0.95;
+
+        margin-bottom:0.6rem;
+
+    }
+
+    .kontakt_forma{
+
+        margin-top:2rem;
+
+    }
+
 }
 
 
@@ -1072,38 +1322,44 @@ body{
 
         max-width:850px;
 
-        font-size:1.25rem;
+        font-size:2.6rem;
 
-        line-height:1.9;
+        line-height:1.4;
 
     }
 
     .projekty_grid{
 
-        grid-template-columns:repeat(3,1fr);
+        grid-template-columns:repeat(3, minmax(280px, 1fr));
 
         gap:2rem;
 
     }
 
-    .projekt_karta{
+    .projekt_karta,
+    .karta_projekt{
 
         border-radius:0 0 36px 36px;
 
         box-shadow:
         12px 12px 0 rgba(0,0,0,0.18);
 
+        max-width:720px;
+        width:100%;
+
     }
 
     .projekt_obrazok{
 
-        height:320px;
+        width:220px;
+        height:220px;
 
     }
 
-    .projekt_info{
+    .projekt_info,
+    .projekt_text{
 
-        padding:2rem;
+        padding:0;
 
     }
 
@@ -1118,6 +1374,34 @@ body{
         font-size:1.05rem;
 
         line-height:1.8;
+
+    }
+
+    .kontakt_text{
+
+        font-size:2.6rem;
+
+    }
+
+    .kontakt_cta{
+
+        font-size:3.4rem;
+
+        margin-top:1.2rem;
+
+    }
+
+    .kontakt_forma{
+
+        margin-top:4rem;
+
+    }
+
+    .kontakt .nadpis_o_mne{
+
+        font-size:8.5rem;
+
+        line-height:0.82;
 
     }
 

@@ -35,17 +35,63 @@
 <main class="obsah">
 
     <section class="kontakt">
-        <h1 class="nadpis_o_mne">Kontakt</h1>
-        <p>
-            Tu vložte kontaktné informácie alebo kontaktný formulár.
-        </p>
+        <div class="kontakt_grid">
+            <div class="kontakt_levo">
+                <h1 class="nadpis_o_mne">KONTAKT</h1>
+                <p class="kontakt_text">Každý silný projekt začína prvou správou.</p>
+                <p class="kontakt_cta">KONTAKTUJTE MA.</p>
+            </div>
+
+            <div class="kontakt_forma">
+                <form>
+                    <div class="form_row form_row_half">
+                        <input type="text" placeholder="Meno" aria-label="Meno">
+                        <input type="text" placeholder="Priezvisko" aria-label="Priezvisko">
+                    </div>
+
+                    <div class="form_row">
+                        <input type="email" placeholder="Gmail" aria-label="Gmail">
+                    </div>
+
+                    <div class="form_row">
+                        <textarea placeholder="Správa" aria-label="Správa"></textarea>
+                    </div>
+
+                    <div class="form_row form_row_bottom">
+                        <div class="form_icon_input">
+                            <input type="email" placeholder="Gmail" aria-label="Gmail">
+                        </div>
+                        <div class="form_icon_input">
+                            <input type="tel" placeholder="Tel" aria-label="Tel">
+                        </div>
+                        <button type="submit" class="tlacidlo male kontakt_submit">Odoslať</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="kontakt_info">
+            <h2 class="kontakt_name">VIKTOR<br>ŠTEFUNKO</h2>
+            <div class="kontakt_details">
+                <p><strong>Telefón:</strong> +421 903 954 871</p>
+                <p><strong>Email:</strong> viktorstefunkogmail.com</p>
+            </div>
+            <div class="kontakt_odkazy">
+                <span>odkazy:</span>
+                <div class="social_icons">
+                    <a href="#"><img src="assets/icons/IG.png" alt="Instagram"></a>
+                    <a href="#"><img src="assets/icons/FB.png" alt="Facebook"></a>
+                    <a href="#"><img src="assets/icons/TT.png" alt="TikTok"></a>
+                    <a href="#"><img src="assets/icons/IN.png" alt="LinkedIn"></a>
+                </div>
+            </div>
+        </div>
     </section>
 
 </main>
 
 <footer class="paticka">
-    © 2026 Viktor Štefunko.
-    Všetky práva vyhradené
+    © 2026 Viktor Štefunko. Všetky práva vyhradené
 </footer>
 
 </body>
