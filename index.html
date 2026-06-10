@@ -23,6 +23,8 @@
     alt="Logo"
     class="logo">
 
+    <input type="checkbox" id="menu-toggle" class="menu_toggle" aria-hidden="true">
+
     <nav class="hlavicka_nav">
         <a href="index.html">Domov</a>
         <a href="o_mne.html">O mne</a>
@@ -30,9 +32,9 @@
         <a href="kontakt.html">Kontakt</a>
     </nav>
 
-    <button class="menu_tlacidlo">
+    <label for="menu-toggle" class="menu_tlacidlo" aria-label="Otvoriť menu">
         ☰
-    </button>
+    </label>
 
 </header>
 
@@ -72,7 +74,7 @@
         <div class="hero_text">
 
             <h2>
-                FOTOGRAFIA A VIDEO PRODUKCIA
+                PHOTOGRAPHY & VIDEO PRODUCTION
             </h2>
 
             <p>
@@ -100,7 +102,8 @@
             NAJLEPŠIE PROJEKTY
         </h2>
 
-        <div class="projekty_grid">
+        <div class="projekty_bg">
+            <div class="projekty_grid">
 
         <!-- =========================
             PROJEKT 1
@@ -133,7 +136,6 @@
                     <img src="assets/icons/Ps.png" alt="Photoshop">
 
                 </div>
-
             </div>
 
         </article>
@@ -210,18 +212,14 @@
 
         </article>
 
-        </div>
+            </div>
+            <div class="projekty_tlacidlo">
 
-        <!-- =========================
-            TLAČIDLO
-        ========================== -->
+                <a href="portfolio.html" class="tlacidlo">
+                    Pozri moje projekty
+                </a>
 
-        <div class="projekty_tlacidlo">
-
-            <a href="#" class="tlacidlo">
-                Pozri moje projekty
-            </a>
-
+            </div>
         </div>
 
     </section>
