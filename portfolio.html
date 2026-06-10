@@ -19,6 +19,8 @@
     alt="Logo"
     class="logo">
 
+    <input type="checkbox" id="menu-toggle" class="menu_toggle" aria-hidden="true">
+
     <nav class="hlavicka_nav">
         <a href="index.html">Domov</a>
         <a href="o_mne.html">O mne</a>
@@ -26,9 +28,9 @@
         <a href="kontakt.html">Kontakt</a>
     </nav>
 
-    <button class="menu_tlacidlo">
+    <label for="menu-toggle" class="menu_tlacidlo" aria-label="Otvoriť menu">
         ☰
-    </button>
+    </label>
 
 </header>
 
@@ -56,7 +58,8 @@
 
     <section class="projekty">
 
-        <div class="projekty_grid">
+        <div class="projekty_bg">
+            <div class="projekty_grid">
 
             <article class="karta_projekt">
                 <img src="img/Caffe%20AROMA.png"
@@ -73,6 +76,7 @@
                         <img src="assets/icons/Ai.png" alt="Adobe Illustrator">
                         <img src="assets/icons/Ps.png" alt="Adobe Photoshop">
                     </div>
+                    <a href="#" class="projekt_tlacidlo">Zobraziť projekt</a>
                 </div>
             </article>
 
@@ -91,6 +95,7 @@
                         <img src="assets/icons/Ai.png" alt="Adobe Illustrator">
                         <img src="assets/icons/Ps.png" alt="Adobe Photoshop">
                     </div>
+                    <a href="#" class="projekt_tlacidlo">Zobraziť projekt</a>
                 </div>
             </article>
 
@@ -109,6 +114,7 @@
                         <img src="assets/icons/Ps.png" alt="Adobe Photoshop">
                         <img src="assets/icons/Lr.png" alt="Adobe Lightroom">
                     </div>
+                    <a href="#" class="projekt_tlacidlo">Zobraziť projekt</a>
                 </div>
             </article>
 
@@ -127,6 +133,7 @@
                         <img src="assets/icons/Ai.png" alt="Adobe Illustrator">
                         <img src="assets/icons/Ps.png" alt="Adobe Photoshop">
                     </div>
+                    <a href="#" class="projekt_tlacidlo">Zobraziť projekt</a>
                 </div>
             </article>
 
@@ -145,6 +152,7 @@
                         <img src="assets/icons/Ai.png" alt="Adobe Illustrator">
                         <img src="assets/icons/Ps.png" alt="Adobe Photoshop">
                     </div>
+                    <a href="#" class="projekt_tlacidlo">Zobraziť projekt</a>
                 </div>
             </article>
 
@@ -163,9 +171,11 @@
                         <img src="assets/icons/Ps.png" alt="Adobe Photoshop">
                         <img src="assets/icons/Lr.png" alt="Adobe Lightroom">
                     </div>
+                    <a href="#" class="projekt_tlacidlo">Zobraziť projekt</a>
                 </div>
             </article>
 
+            </div>
         </div>
 
     </section>
